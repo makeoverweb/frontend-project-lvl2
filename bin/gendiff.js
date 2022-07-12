@@ -1,11 +1,21 @@
 #!/usr/bin/env node
-import { Command } from "commander/esm.mjs";
-const program = new Command();
+
+const { resolve } = require("path");
+const { genDiff } = require("../index");
+const { program } = require("commander");
+
+const currentPath = process.cwd();
 
 program
   .description("Compares two configuration files and shows a difference.")
   .version("-V, --version output the version number")
   .arguments("<filepath1> <filepath2>")
-  .option("-f, --format <type>", "output format");
+  .option("-f, --format <type>", "output format")
+  .action((file1Name, file2Name) => {
+    const file1Path = resolve(currentPath, file1Name);
+    const file2Path = resolve(currentPath, file2Name);
+
+    console.log(genDiff(file1Path, file2Path));
+  });
 
 program.parse();
