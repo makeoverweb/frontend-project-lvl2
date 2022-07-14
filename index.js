@@ -1,5 +1,6 @@
 const { sortBy, uniq } = require("lodash");
 const fs = require("fs");
+const yaml = require("js-yaml");
 const { extname } = require("path");
 
 const sortObj = (obj) =>
@@ -43,12 +44,20 @@ const defineFileType = (str) => {
   return extname(str);
 };
 
+const parseOfType = (type, path) => {
+  if (type === ".json") {
+    return JSON.parse(fs.readFileSync(path, "utf-8"));
+  } else {
+    return yaml.load(fs.readFileSync(path, "utf8"));
+  }
+};
+
 const genDiff = (path1, path2) => {
   const typeOfFile1 = defineFileType(path1);
   const typeOfFile2 = defineFileType(path2);
 
-  const file1 = JSON.parse(fs.readFileSync(path1, "utf-8"));
-  const file2 = JSON.parse(fs.readFileSync(path2, "utf-8"));
+  const file1 = parseOfType(typeOfFile1, path1);
+  const file2 = parseOfType(typeOfFile2, path2);
 
   const sortFile1 = sortObj(file1);
   const sortFile2 = sortObj(file2);
