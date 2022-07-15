@@ -5,5 +5,5 @@ publish:
 				npm publish --dry-run
 
 hello:
-				cd ../../ echo "Hello, World!"
+				echo "Hello, World!"
 
