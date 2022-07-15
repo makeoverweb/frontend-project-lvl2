@@ -2,7 +2,7 @@
 
 [![Actions Status](https://github.com/makeoverweb/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/makeoverweb/frontend-project-lvl2/actions)
 
-![push](https://github.com/makeoverweb/frontend-project-lvl2/actions/workflows/check-build.yml/badge.svg?event=push)
+![Actions Status(https://github.com/makeoverweb/frontend-project-lvl2/workflows/check-build/badge.svg)](https://github.com/makeoverweb/frontend-project-lvl2/actions)
 
 sudo npm i -g makeoverweb-gendiff
 
