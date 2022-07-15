@@ -4,6 +4,6 @@ install:
 publish: 
 				npm publish --dry-run
 
-say-hello:
+hello:
 				echo "Hello, World!"
 
