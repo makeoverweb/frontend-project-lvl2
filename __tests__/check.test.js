@@ -1,4 +1,4 @@
-// const { test, expect } = require("@jest/globals");
+const { test, expect } = require("@jest/globals");
 // const { resolve } = require("path");
 // const { genDiff } = require("../index.js");
 
