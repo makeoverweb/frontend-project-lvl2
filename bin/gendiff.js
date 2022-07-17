@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const { resolve } = require("path");
-const { genDiff } = require("../index");
 const { program } = require("commander");
+const { genDiff } = require("../index.js");
 
 const currentPath = process.cwd();
 

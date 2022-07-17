@@ -13,4 +13,12 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
-      - run: make hello
+      - run: make lint
+      - run: make test
+      - name: Test & publish code coverage
+          uses: paambaati/codeclimate-action@v3.0.0
+          env:
+            CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          with:
+            coverageCommand: npm run coverage
+            debug: true

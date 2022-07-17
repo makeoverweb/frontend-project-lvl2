@@ -4,6 +4,10 @@
 
 [![Check Build](https://github.com/makeoverweb/frontend-project-lvl2/actions/workflows/check-build/badge.svg)](https://github.com/makeoverweb/frontend-project-lvl2/actions)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/3e460362f60316d85fbc/maintainability)](https://codeclimate.com/github/makeoverweb/frontend-project-lvl2/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/3e460362f60316d85fbc/test_coverage)](https://codeclimate.com/github/makeoverweb/frontend-project-lvl2/test_coverage)
+
 sudo npm i -g makeoverweb-gendiff
 
 ## gendiff
